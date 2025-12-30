@@ -1,6 +1,7 @@
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import TrustBanner from "@/components/TrustBanner";
+import Header from "@/components/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} ${robotoMono.variable}`}>
         <TrustBanner />
+        <Header />
         <main>{children}</main>
       </body>
     </html>

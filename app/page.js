@@ -1,66 +1,67 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import { heroContent, manufacturingManifesto } from '@/lib/mockData';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className={styles.homeContainer}>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>{heroContent.title}</h1>
+          <p className={styles.heroSubtitle}>{heroContent.subtitle}</p>
+          <div className={styles.heroActions}>
+            <Link href="/products" className={styles.buttonPrimary}>
+              {heroContent.ctaPrimary}
+            </Link>
+            <Link href="/quality" className={styles.buttonSecondary}>
+              {heroContent.ctaSecondary}
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Manifesto / Manufacturing Narrative Section */}
+      <section className={styles.manifesto}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.eyebrow}>Our Manufacturing Standard</span>
+            <h2 className={styles.sectionTitle}>Engineered for the Uncompromising</h2>
+          </div>
+          <div className={styles.manifestoGrid}>
+            {manufacturingManifesto.map((item, index) => (
+              <div key={index} className={styles.manifestoItem}>
+                <span className={styles.index}>0{index + 1}</span>
+                <h3 className={styles.itemTitle}>{item.title}</h3>
+                <p className={styles.itemDescription}>{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Trust Quote / Stats Section */}
+      <section className={styles.trustSection}>
+        <div className={styles.container}>
+          <blockquote className={styles.quote}>
+            "Sentara Labs sets the global benchmark for precision manufacturing in clinical environments."
+          </blockquote>
+          <div className={styles.stats}>
+            <div className={styles.statItem}>
+              <span className={styles.statValue}>100%</span>
+              <span className={styles.statLabel}>Compliance Rate</span>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statValue}>ISO 9001</span>
+              <span className={styles.statLabel}>Certified Facilities</span>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statValue}>24/7</span>
+              <span className={styles.statLabel}>Monitoring</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
