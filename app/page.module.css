@@ -115,14 +115,18 @@
 .manifestoItem {
   display: flex;
   flex-direction: column;
+  padding: 48px;
+  background-color: var(--background);
+  transition: all var(--transition-speed);
+}
+
+.manifestoItem:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
 }
 
 .index {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--clinical-blue);
-  margin-bottom: 24px;
-  opacity: 0.6;
+  margin-bottom: 32px;
 }
 
 .itemTitle {
@@ -143,13 +147,13 @@
 }
 
 .quote {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 600;
-  font-style: italic;
-  max-width: 800px;
-  margin: 0 auto 80px;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin: 0 auto 100px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: var(--clinical-gray-dark);
 }
 
 .stats {
@@ -161,18 +165,21 @@
 .statItem {
   display: flex;
   flex-direction: column;
+  padding: 32px;
+  border-left: 1px solid var(--border-color);
+  flex: 1;
 }
 
 .statValue {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .statLabel {
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--foreground);
   opacity: 0.6;
 }
 

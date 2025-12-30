@@ -5,19 +5,19 @@ import styles from './page.module.css';
 
 const ProductsPage = () => {
     return (
-        <div className={styles.productsContainer}>
+        <div className={`${styles.productsContainer} animate-fade-in`}>
             <header className={styles.header}>
                 <div className={styles.container}>
-                    <span className={styles.eyebrow}>Catalog</span>
+                    <span className={styles.eyebrow}>Inventory & Capabilities</span>
                     <h1 className={styles.title}>Precision Manufacturing Output.</h1>
                     <p className={styles.subtitle}>
-                        Explore our range of clinical-grade compounds and industrial solvents,
-                        engineered for absolute purity and performance.
+                        Explore our ready-to-ship compounds and custom synthesis capabilities.
+                        All products are certified by our internal Quality Control laboratory.
                     </p>
                 </div>
             </header>
 
-            <section className={styles.gridSection}>
+            <section className={`${styles.productSection} animate-fade-up`}>
                 <div className={styles.container}>
                     <div className={styles.grid}>
                         {mockProducts.map((product) => (

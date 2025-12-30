@@ -2,7 +2,7 @@ import styles from './page.module.css';
 
 const AboutPage = () => {
     return (
-        <div className={styles.aboutContainer}>
+        <div className={`${styles.aboutContainer} animate-fade-in`}>
             <header className={styles.header}>
                 <div className={styles.container}>
                     <span className={styles.eyebrow}>Our Mission</span>
@@ -14,7 +14,7 @@ const AboutPage = () => {
                 </div>
             </header>
 
-            <section className={styles.content}>
+            <section className={`${styles.content} animate-fade-up`}>
                 <div className={styles.container}>
                     <div className={styles.grid}>
                         <div className={styles.gridItem}>

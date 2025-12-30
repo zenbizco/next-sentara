@@ -15,21 +15,21 @@ const QualityPage = () => {
     ];
 
     return (
-        <div className={styles.qualityContainer}>
+        <div className={`${styles.qualityContainer} animate-fade-in`}>
             {/* Page Header */}
             <header className={styles.header}>
                 <div className={styles.container}>
-                    <span className={styles.eyebrow}>Governance & Standards</span>
+                    <span className={styles.eyebrow}>Excellence as Standard</span>
                     <h1 className={styles.title}>The Quality Standard for Modern Manufacturing.</h1>
                     <p className={styles.subtitle}>
-                        At Sentara Labs, quality is not a department—it is the foundation of our existence.
-                        Explore our rigorous compliance frameworks and technical documentation.
+                        Our facilities operate under strict ISO 9001 and GMP protocols.
+                        We provide full traceability and documentation for every compound we produce.
                     </p>
                 </div>
             </header>
 
             {/* Certifications Grid */}
-            <section className={styles.certifications}>
+            <section className={`${styles.certifications} animate-fade-up`}>
                 <div className={styles.container}>
                     <div className={styles.grid}>
                         {certifications.map((cert) => (

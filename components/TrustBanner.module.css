@@ -3,9 +3,10 @@
     border-bottom: 1px solid var(--border-color);
     padding: 12px 0;
     font-size: 0.75rem;
-    color: var(--clinical-gray-dark);
+    color: var(--foreground);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
+    font-weight: 700;
 }
 
 .container {
@@ -15,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
 }
 
 .status {
@@ -35,16 +37,18 @@
 }
 
 .placeholderIcon {
-    width: 32px;
-    height: 32px;
-    background-color: var(--clinical-gray-medium);
-    border: 1px solid var(--border-color);
+    width: 28px;
+    height: 28px;
+    background-color: var(--foreground);
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 0.6rem;
-    border-radius: 4px;
+    font-weight: 900;
+    font-size: 0.625rem;
+    border-radius: 2px;
+    color: var(--background);
+    box-shadow: var(--shadow-sm);
 }
 
 .label {

@@ -2,7 +2,7 @@ import styles from './page.module.css';
 
 const ManufacturingPage = () => {
     return (
-        <div className={styles.manufacturingContainer}>
+        <div className={`${styles.manufacturingContainer} animate-fade-in`}>
             <header className={styles.header}>
                 <div className={styles.container}>
                     <span className={styles.eyebrow}>Capabilities</span>
@@ -15,7 +15,7 @@ const ManufacturingPage = () => {
                 </div>
             </header>
 
-            <section className={styles.capabilities}>
+            <section className={`${styles.capabilities} animate-fade-up`}>
                 <div className={styles.container}>
                     <div className={styles.capGrid}>
                         <div className={styles.capItem}>
