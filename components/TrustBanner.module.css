@@ -1,0 +1,66 @@
+.banner {
+    background-color: var(--clinical-gray-light);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+    font-size: 0.75rem;
+    color: var(--clinical-gray-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.status {
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.logos {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.logoItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.placeholderIcon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--clinical-gray-medium);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.6rem;
+    border-radius: 4px;
+}
+
+.label {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
